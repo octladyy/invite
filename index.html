@@ -1,0 +1,854 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Мурат & Назира — Үйлөнүү тою</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&family=Lexend:wght@100..900&display=swap"
+    rel="stylesheet">
+
+  <meta property="og:title" content="🌸 ЧАКЫРУУ 🌸 ">
+  <meta property="og:description" content="
+
+Урматтуу туугандар жана достор!
+Биз сиздерди 9-Октябрь куну 
+  Асылбек & Бегимайдын 
+  Үлпөт тоюнда кутобуз!!!
+
+✨ Сиздерди чыдамсыздык менен күтөбүз! ✨">
+  <meta property="og:image" content="">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Kurale&display=swap');
+
+    body, .names * {
+         font-family: "Great Vibes", cursive !important;
+    }
+
+    .footer-eyebrow , .footer-title , .san-min * {
+        font-family: "Kurale", serif !important;
+    }
+  </style>
+
+  <style>
+    :root {
+      --bg: #ffffff;
+      --fg: #111;
+      --muted: #000;
+      --gold: #C5A25E;
+      --line: #eee;
+      --accent: #000;
+      --accent-2: #000;
+      --gold-2: #EAD7A1;
+      --gold-3: #C5A25E;
+      --gold-glow: 0 1px 0 #fff, 0 0 14px rgba(197, 162, 94, .18);
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    html,
+    body {
+      height: 100%
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, Arial, sans-serif;
+      color: var(--fg);
+      /* почти незаметный светлый градиент */
+      background: linear-gradient(180deg, #ffffff 0%, #ffffff 75%, #fefefe 100%);
+      background-attachment: fixed;
+      background-image: url(first.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100%;
+
+    }
+
+    .container {
+      width: min(92vw, 720px);
+      margin: 0 auto
+    }
+
+    section {
+      padding: 48px 0;
+      border-top: 1px solid var(--line)
+    }
+
+    section:first-of-type {
+      border-top: 0
+    }
+
+    .container,
+    section,
+    .hero {
+      text-align: center;
+    }
+
+    h1,
+    h2,
+    h3 {
+      margin: 0 0 16px;
+      line-height: 1.15;
+      color: #000
+    }
+
+    h1 {
+      font-family: "Playfair Display", serif;
+      font-weight: 700;
+      font-size: clamp(28px, 8vw, 60px)
+    }
+
+    h2 {
+      font-family: "Playfair Display", serif;
+      font-weight: 700;
+      font-size: clamp(22px, 5.4vw, 32px)
+    }
+
+    .sub {
+      color: var(--muted);
+      font-size: clamp(14px, 3.4vw, 16px)
+    }
+
+    .italic {
+      font-family: "Playfair Display", serif;
+      font-style: italic;
+      color: var(--gold)
+    }
+
+    p {
+      margin: 12px 0 0;
+      font-size: clamp(15px, 3.8vw, 17px);
+      color: #000
+    }
+
+    /* Header */
+    .hero {
+      padding: 48px 0 14px
+    }
+
+    .names {
+      font-size: clamp(40px, 8.4vw, 96px);
+      font-family: "Playfair Display", serif;
+      letter-spacing: .5px;
+      color: #000
+    }
+
+    .names span {
+      display: inline-block
+    }
+
+    .amp {
+      padding: 0 .4ch;
+      color: var(--gold)
+    }
+
+    .wedding-wrap {
+      position: relative;
+      display: inline-block;
+      margin-top: 6px;
+    }
+
+    .wedding-tag {
+      font-family: "Playfair Display", serif;
+      font-style: italic;
+      color: var(--gold);
+      font-weight: 700;
+      letter-spacing: .3px;
+      font-size: clamp(26px, 7vw, 46px);
+      text-shadow: 0 1px 0 #fff, 0 0 18px rgba(197, 162, 94, .22);
+    }
+
+    /* звёзды */
+    .wedding-wrap .star {
+      position: absolute;
+      border-radius: 50%;
+      width: 8px;
+      height: 8px;
+      background: radial-gradient(circle, #fff 0 40%, #FFDFA6 62%, rgba(197, 162, 94, .9) 72%, rgba(197, 162, 94, 0) 73%);
+      box-shadow: 0 0 10px rgba(197, 162, 94, .7);
+      opacity: .6;
+      transform: scale(.9);
+      animation: twinkle 2.3s ease-in-out infinite;
+    }
+
+    .wedding-wrap .star.s2 {
+      width: 6px;
+      height: 6px;
+      animation-duration: 2.7s
+    }
+
+    .wedding-wrap .star.s3 {
+      width: 10px;
+      height: 10px;
+      animation-duration: 3.1s
+    }
+
+    @keyframes twinkle {
+
+      0%,
+      100% {
+        opacity: .35;
+        transform: scale(.8)
+      }
+
+      50% {
+        opacity: 1;
+        transform: scale(1)
+      }
+    }
+
+    /* ротатор */
+    .rotator-plain {
+      margin: 6px 0 6px;
+      font-weight: 800;
+      color: #000;
+      font-size: clamp(18px, 5.8vw, 30px);
+      letter-spacing: .2px;
+      min-height: 1.35em;
+      opacity: 0;
+      transform: translateY(6px);
+      transition: opacity .45s ease, transform .45s ease;
+    }
+
+    .rotator-plain.in {
+      opacity: 1;
+      transform: none
+    }
+
+    /* Фото */
+    .photo {
+      position: relative;
+      overflow: hidden;
+      border-radius: 18px;
+      background: #fff;
+      margin: 12px auto 0;
+      height: 400px;
+      width: 300px;
+      box-shadow: 0 30px 70px rgba(0, 0, 0, .38), 0 14px 28px rgba(0, 0, 0, .28), 0 3px 10px rgba(0, 0, 0, .18);
+      transition: box-shadow .25s ease;
+    }
+
+    .photo:hover {
+      box-shadow: 0 40px 90px rgba(0, 0, 0, .42), 0 18px 36px rgba(0, 0, 0, .30), 0 4px 14px rgba(0, 0, 0, .20)
+    }
+
+    .photo img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      transition: transform .6s ease
+    }
+
+    .photo:hover img {
+      transform: scale(1.01)
+    }
+
+    /* Countdown */
+    .count-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-top: 18px
+    }
+
+    .box {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 14px 8px;
+      text-align: center
+    }
+
+    .box .num {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(22px, 7vw, 34px);
+      font-weight: 700;
+      color: #000
+    }
+
+    .box .label {
+      color: #000;
+      font-size: 12px;
+      margin-top: 4px
+    }
+
+    /* Calendar */
+    .cal {
+      margin-top: 16px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      overflow: hidden
+    }
+
+    .cal-head {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px 14px;
+      background: #fff;
+      border-bottom: 1px solid var(--line)
+    }
+
+    .cal-title {
+      font-weight: 600;
+      color: #000
+    }
+
+    .cal-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr)
+    }
+
+    .dow,
+    .day {
+      padding: 10px 0;
+      text-align: center;
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      font-size: 14px;
+      color: #000
+    }
+
+    .cal-grid> :nth-child(7n) {
+      border-right: 0
+    }
+
+    .dow {
+      background: #fff;
+      font-weight: 600
+    }
+
+    .day.empty {
+      background: #fff
+    }
+
+    .day .d {
+      display: inline-block;
+      min-width: 2ch
+    }
+
+    .day.mark .d {
+      background: var(--gold);
+      color: #fff;
+      border-radius: 10px;
+      padding: 2px 8px;
+      font-weight: 700
+    }
+
+    /* Локация */
+    .section.location {
+      margin-top: clamp(80px, 10vw, 150px);
+      text-align: center
+    }
+
+    .h2.loc-title {
+      color: #000;
+      text-transform: uppercase;
+      letter-spacing: .14em;
+      margin: 0 0 40px
+    }
+
+    .loc-card {
+      max-width: 980px;
+      margin: 0 auto;
+      display: grid;
+      place-items: center;
+      text-align: center
+    }
+
+    .loc-venue {
+      font: 700 clamp(20px, 4vw, 26px) 'Playfair Display', serif;
+      line-height: 1.32;
+      margin: 0 0 12px;
+      color: #000
+    }
+
+    .loc-venue .accent {
+      color: #000
+    }
+
+    .loc-address {
+      color: #000;
+      font-size: clamp(15px, 2.6vw, 19px);
+      line-height: 1.5;
+      margin: 0 0 24px
+    }
+
+    .loc-photo {
+      margin: 0 auto 26px;
+      border-radius: 18px;
+      overflow: hidden;
+      aspect-ratio: 16/9;
+      background: #fff;
+      max-width: min(980px, 96%);
+      display: block;
+      box-shadow:
+        0 18px 46px rgba(0, 0, 0, .12), 0 8px 20px rgba(0, 0, 0, .10), 0 2px 10px rgba(0, 0, 0, .06);
+    }
+
+    .loc-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center
+    }
+
+    .loc-btn {
+      display: inline-block;
+      padding: 16px 26px;
+      border-radius: 999px;
+      background: #000;
+      color: #fff;
+      font-weight: 700;
+      letter-spacing: .04em;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, .22);
+      transition: transform .12s ease, box-shadow .2s ease, background .2s ease
+    }
+
+    .loc-btn:hover {
+      transform: translateY(-1px);
+      background: #000
+    }
+
+    .loc-btn:active {
+      transform: translateY(0);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, .18)
+    }
+
+    /* ХОЗЯЕВА — золотым */
+    .hosts-big {
+      font-family: "Playfair Display", serif;
+      font-weight: 800;
+      font-size: clamp(26px, 7.5vw, 44px);
+      color: var(--gold);
+      text-shadow: var(--gold-glow);
+    }
+
+    .hosts-cycle {
+      position: relative;
+      display: inline-block;
+      white-space: pre
+    }
+
+    .hosts-cycle.fade {
+      opacity: 0;
+      transition: opacity .5s ease
+    }
+
+    .hosts-cycle .char {
+      display: inline-block;
+      opacity: 0;
+      transform: translateY(6px);
+      animation: hostIn .45s ease forwards;
+      animation-delay: calc(var(--i) * 80ms);
+    }
+
+    @keyframes hostIn {
+      to {
+        opacity: 1;
+        transform: none
+      }
+    }
+
+    /* Фото-футер (золотой градиент поверх фото) */
+    .footer-hero {
+      padding: 0;
+      margin-top: 60px;
+      min-height: 100svh;
+      position: relative;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      overflow: hidden;
+      color: #000;
+    }
+
+    .footer-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .footer-hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(0deg, rgba(255, 255, 255, 0) 35%, rgba(255, 255, 255, .90) 72%, #fff 100%),
+        linear-gradient(0deg, rgba(197, 162, 94, .22), rgba(197, 162, 94, .10) 42%, rgba(197, 162, 94, 0) 70%);
+    }
+
+    .footer-hero .panel {
+      position: relative;
+      z-index: 1;
+      width: min(920px, 100%);
+      padding: 36px 18px 44px
+    }
+
+    .footer-eyebrow {
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 13px;
+      color: #000;
+      opacity: .95
+    }
+
+    .footer-title {
+      font: 700 clamp(28px, 5.6vw, 44px) 'Playfair Display', serif;
+      margin: 10px 0 6px;
+      color: #000
+    }
+
+    .footer-names {
+      font: 800 clamp(30px, 6.4vw, 50px) 'Playfair Display', serif;
+      color: var(--gold);
+      letter-spacing: .08em;
+      text-shadow: var(--gold-glow);
+    }
+
+    .legal {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      color: #000;
+      padding: 16px
+    }
+
+    /* SCROLL-REVEAL */
+    :root {
+      --reveal-distance: 16px;
+      --reveal-dur: .7s;
+      --reveal-ease: cubic-bezier(.2, .6, .2, 1);
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(var(--reveal-distance));
+      filter: blur(6px);
+      transition: opacity var(--reveal-dur) var(--reveal-ease), transform var(--reveal-dur) var(--reveal-ease), filter calc(var(--reveal-dur)*.8) var(--reveal-ease)
+    }
+
+    .reveal.in {
+      opacity: 1;
+      transform: none;
+      filter: blur(0)
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      .reveal,
+      .reveal.in {
+        opacity: 1;
+        transform: none;
+        filter: none;
+        transition: none
+      }
+    }
+
+    /* Кнопка музыки — чёрная */
+    .bgm-toggle {
+      position: fixed;
+      top: calc(16px + env(safe-area-inset-top, 0px));
+      right: calc(16px + env(safe-area-inset-right, 0px));
+      z-index: 9999;
+      width: 56px;
+      height: 56px;
+      border-radius: 999px;
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+      border: 1px solid #000;
+      background: linear-gradient(180deg, #000, #111);
+      color: #fff;
+      font-weight: 700;
+      font-size: 16px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, .25);
+      -webkit-tap-highlight-color: transparent;
+      transition: transform .15s ease, box-shadow .2s ease, filter .2s ease;
+    }
+
+    .bgm-toggle:hover {
+      transform: translateY(-1px)
+    }
+
+    .bgm-toggle.on {
+      outline: 2px solid rgba(0, 0, 0, .25);
+      filter: saturate(1.05)
+    }
+
+    .bgm-toggle .icon {
+      line-height: 1
+    }
+    
+    .rotator-plain{
+      font-size: 40px;
+      font-weight: 600;
+    }
+  </style>
+
+</head>
+
+<body>
+  <header class="hero container reveal">
+    <div class="names"><span>Мурат</span><span class="amp">&</span><span>Назира</span></div>
+
+    <div class="wedding-wrap">
+      <div class="wedding-tag">Үлпөт той </div>
+      <span class="star s2" style="left:-26px; top:-14px"></span>
+      <span class="star s3" style="left: 12px; top:-22px"></span>
+      <span class="star s2" style="right:-18px; top:-10px"></span>
+      <span class="star s2" style="left:-34px; bottom:-6px"></span>
+      <span class="star s3" style="right:-30px; bottom:-8px"></span>
+      <span class="star s2" style="left:30%; top:-28px"></span>
+      <span class="star s2" style="right:20%; bottom:-22px"></span>
+    </div>
+  </header>
+
+  <section class="container count-wrap reveal" id="countdown">
+    <div id="rotPlain" class="rotator-plain">5-ноябрь 2025</div>
+
+    <div class="san-min">
+      <h2 style="padding-top: 50px;">Саналуу мүнөттөр калды</h2>
+      <div class="count-grid" aria-live="polite">
+        <div class="box">
+          <div class="num" id="d">—</div>
+          <div class="label">күн</div>
+        </div>
+        <div class="box">
+          <div class="num" id="h">—</div>
+          <div class="label">саат</div>
+        </div>
+        <div class="box">
+          <div class="num" id="m">—</div>
+          <div class="label">мүнөт</div>
+        </div>
+        <div class="box">
+          <div class="num" id="s">—</div>
+          <div class="label">секунд</div>
+        </div>
+      </div>
+    </div>
+
+    <section class="container reveal">
+      <div>
+        <h2>Календарь</h2>
+        <div class="cal" id="calendar" aria-label="Белгиленген күнү бар жылнаама"></div>
+      </div>
+    </section>
+
+    <div class="photo">
+      <img loading="lazy" alt="Үйлөнүү алдындагы сүрөт тартуудагы жуп" src="first.jpg">
+    </div>
+  </section>
+
+  <section class="container reveal">
+    <div class="photo">
+      <img loading="lazy" alt="Бактылуу жаш жубайлар" src="second.jpg">
+    </div>
+  </section>
+
+  <!-- ЛОКАЦИЯ -->
+  <section class="section location reveal">
+    <h2 class="h2 loc-title">ЖАЙГАШКАН ЖЕРИ</h2>
+    <div class="loc-card">
+      <div class="loc-text">
+        <div class="loc-venue">«Сый-Ордо»<span class="accent">рестораны</span></div>
+        <div class="loc-address">Кызыл-Өзгөрүш айылы</div>
+      </div>
+      <div class="loc-photo"><img src="syi-ordo.jpg" alt="«Сый-Ордо»" loading="lazy"></div>
+      <a class="loc-btn" href="https://go.2gis.com/XBmv0" target="_blank" rel="noopener">Картадан ачуу</a>
+    </div>
+  </section>
+
+
+  <section class="container reveal" style="padding-bottom:24px">
+    <div class="photo">
+      <img src="third.jpg" alt="Жуптун романтикалуу учуру">
+    </div>
+  </section>
+
+  <!-- Фото-футер -->
+  <footer class="footer-hero">
+    <img class="footer-img" src="footer.jpeg" alt="" loading="lazy">
+    <div class="panel">
+      <div class="footer-eyebrow">СИЗДЕРДИ ЧЫДАМСЫЗДЫК МЕНЕН КҮТӨБҮЗ</div>
+      <div class="footer-title">Бул кечени сиздер менен бөлүшкөнүбүзгө кубанычтабыз</div>
+      <div class="footer-names">ЭРЖАН &amp; БУРУЛ</div>
+    </div>
+    <div class="legal">© <span id="y"></span></div>
+  </footer>
+
+  <!-- Фоновая музыка -->
+  <audio id="bgm" preload="auto" autoplay playsinline loop>
+    <source src="amr-diab-osad-einy_(muzzonas.ru).mp3" type="audio/mpeg">
+  </audio>
+  <!-- Кнопка музыки -->
+  <button class="bgm-toggle" id="bgmToggle" aria-pressed="false" aria-label="Музыканы күйгүзүү">
+    <span class="icon">♫</span>
+  </button>
+
+  <script>
+    // reveal
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+    // Rotator
+    const rotPlain = document.getElementById('rotPlain');
+    const slides = ['5-ноябрь 2025', 'Башталышы 17:00', '«Сый-Ордо» рестораны'];
+    let r = 1;
+    function rotatePlain() {
+      rotPlain.classList.remove('in');
+      setTimeout(() => { rotPlain.textContent = slides[r]; rotPlain.classList.add('in'); r = (r + 1) % slides.length; }, 220);
+    }
+    requestAnimationFrame(() => rotPlain.classList.add('in'));
+    setInterval(rotatePlain, 3000);
+
+    // Countdown — 9 Oct 2025, 17:00 (GMT+6)
+    const eventDate = new Date('2025-11-05T17:00:00+06:00');
+    const $d = document.getElementById('d'), $h = document.getElementById('h'), $m = document.getElementById('m'), $s = document.getElementById('s');
+    function tick() {
+      const now = new Date(); let t = eventDate - now; if (t < 0) t = 0;
+      const days = Math.floor(t / 86400000);
+      const hours = Math.floor((t % 86400000) / 3600000);
+      const mins = Math.floor((t % 3600000) / 60000);
+      const secs = Math.floor((t % 60000) / 1000);
+      $d.textContent = String(days);
+      $h.textContent = String(hours).padStart(2, '0');
+      $m.textContent = String(mins).padStart(2, '0');
+      $s.textContent = String(secs).padStart(2, '0');
+    }
+    tick(); setInterval(tick, 1000);
+
+    // Calendar (месяцы оставил общеупотребимые; дни недели — на кыргызском)
+    const calEl = document.getElementById('calendar');
+    const markDate = new Date('2025-11-05T00:00:00+06:00');
+    const year = markDate.getFullYear();
+    const month = markDate.getMonth();
+    const monthNames = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'];
+    const dow = ['ПН', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс']; // Дүйшөмбү...Жекшемби
+
+    function buildCalendar(y, m) {
+      const first = new Date(y, m, 1);
+      const last = new Date(y, m + 1, 0);
+      const firstDay = (first.getDay() + 6) % 7; // Monday=0
+      const totalDays = last.getDate();
+
+      const head = document.createElement('div');
+      head.className = 'cal-head';
+      head.innerHTML = `<div class="cal-title">${monthNames[m]} ${y}</div>`;
+
+      const grid = document.createElement('div');
+      grid.className = 'cal-grid';
+
+      dow.forEach(d => {
+        const el = document.createElement('div'); el.className = 'dow'; el.textContent = d; grid.appendChild(el);
+      });
+
+      for (let i = 0; i < firstDay; i++) {
+        const empty = document.createElement('div'); empty.className = 'day empty'; grid.appendChild(empty);
+      }
+      for (let d = 1; d <= totalDays; d++) {
+        const el = document.createElement('div'); el.className = 'day';
+        const span = document.createElement('span'); span.className = 'd'; span.textContent = d;
+        if (d === markDate.getDate()) el.classList.add('mark');
+        el.appendChild(span); grid.appendChild(el);
+      }
+
+      const wrap = document.createElement('div');
+      wrap.appendChild(head); wrap.appendChild(grid);
+      return wrap;
+    }
+    calEl.appendChild(buildCalendar(year, month));
+
+    // Хозяева — анимация
+    (function () {
+      const el = document.getElementById('hostsText'); if (!el) return;
+      const text = el.dataset.text || el.textContent.trim();
+      const STEP_MS = 80, CHAR_DUR = 450, HOLD_MS = 1400, FADE_MS = 500;
+      function buildCycle() {
+        el.classList.remove('fade'); el.innerHTML = ''; el.style.setProperty('--step', STEP_MS + 'ms');
+        [...text].forEach((ch, i) => {
+          const span = document.createElement('span');
+          span.className = 'char' + (ch === '&' ? ' amp' : '');
+          span.style.setProperty('--i', i); span.textContent = ch; el.appendChild(span);
+        });
+        const totalReveal = STEP_MS * (text.length - 1) + CHAR_DUR + HOLD_MS;
+        setTimeout(() => el.classList.add('fade'), totalReveal);
+        setTimeout(buildCycle, totalReveal + FADE_MS + 200);
+      }
+      buildCycle();
+    })();
+
+    // Год в футере
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    /* ===== МУЗЫКА: автозапуск + чёрный тоггл ===== */
+    (function () {
+      const audio = document.getElementById('bgm');
+      const btn = document.getElementById('bgmToggle');
+      if (!audio || !btn) return;
+
+      audio.volume = 0.65;
+      btn.dataset.state = 'off';
+
+      function setBtn(on) {
+        btn.classList.toggle('on', on);
+        btn.setAttribute('aria-pressed', on);
+        btn.title = on ? 'Музыканы өчүрүү' : 'Музыканы күйгүзүү';
+        btn.querySelector('.icon').textContent = on ? '🔊' : '♫';
+        btn.dataset.state = on ? 'on' : 'off';
+      }
+
+      async function tryPlay() {
+        try { audio.muted = false; await audio.play(); setBtn(true); return true; }
+        catch (e) { setBtn(false); return false; }
+      }
+
+      if (document.readyState === 'complete' || document.readyState === 'interactive') {
+        tryPlay();
+      } else {
+        document.addEventListener('DOMContentLoaded', tryPlay, { once: true });
+      }
+
+      const unlock = async () => {
+        const ok = await tryPlay();
+        if (ok) {
+          window.removeEventListener('click', unlock, { passive: true });
+          window.removeEventListener('touchend', unlock, { passive: true });
+          window.removeEventListener('keydown', unlock, { passive: true });
+        }
+      };
+      window.addEventListener('click', unlock, { passive: true });
+      window.addEventListener('touchend', unlock, { passive: true });
+      window.addEventListener('keydown', unlock, { passive: true });
+
+      document.addEventListener('visibilitychange', () => { if (!document.hidden && audio.paused) tryPlay(); });
+
+      btn.addEventListener('click', () => {
+        if (audio.paused) { tryPlay(); }
+        else { audio.pause(); setBtn(false); }
+      });
+    })();
+  </script>
+</body>
+
+</html>
