@@ -11,7 +11,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&family=Lexend:wght@100..900&display=swap"
     rel="stylesheet">
 
-  <meta property="og:image" content="https://arsenmirlanov05-ux.github.io/-/img000.jpeg">
+  <!-- <meta property="og:image" content="https://arsenmirlanov05-ux.github.io/-/img000.jpeg"> -->
+   <meta property="og:image" content="https://arsenmirlanov05-ux.github.io/-/img000.jpeg">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
 
   <meta property="og:title" content="🌸 ЧАКЫРУУ 🌸 ">
   <meta property="og:description" content="✨Биз сиздерди 5-ноябрь  күнү Мурат & Назиранын  үлпөт тоюнда күтөбүз!!!✨">
@@ -973,10 +975,13 @@
       console.log(`Атыңыз: ${name}\nЖооп: ${answer}`);
       const data = {
         name: name,
-        answer: `${answer}`
+        text: `${answer}`
       };
       try {
-        const res = await fetch('https://68efa334b06cc802829e2c57.mockapi.io/api/v1/users', {
+        // const base_url ="http://188.225.45.194:8000/";
+        const base_url ="https://68efa334b06cc802829e2c57.mockapi.io/api/v1/users";
+
+        const res = await fetch(base_url, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
