@@ -11,11 +11,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&family=Lexend:wght@100..900&display=swap"
     rel="stylesheet">
 
-  <meta property="og:title" content="🌸 ЧАКЫРУУ 🌸 ">
-  <meta property="og:description"
-
-    content="✨Урматтуу туугандар жана достор! Биз сиздерди 5-ноябрь  күнү Мурат & Назиранын  үлпөт тоюнда күтөбүз!!!✨">
   <meta property="og:image" content="https://arsenmirlanov05-ux.github.io/-/img000.jpeg">
+
+  <meta property="og:title" content="🌸 ЧАКЫРУУ 🌸 ">
+  <meta property="og:description" content="✨Биз сиздерди 5-ноябрь  күнү Мурат & Назиранын  үлпөт тоюнда күтөбүз!!!✨">
+
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap"
     rel="stylesheet">
@@ -61,7 +61,6 @@
 
     body {
       margin: 0;
-      font-family: Inter, system-ui, Arial, sans-serif;
       color: var(--fg);
       /* почти незаметный светлый градиент */
       background: linear-gradient(180deg, #ffffff 0%, #ffffff 75%, #fefefe 100%);
@@ -288,7 +287,8 @@
       margin-top: 16px;
       border: 1px solid var(--line);
       border-radius: 16px;
-      overflow: hidden
+      overflow: hidden;
+      /* font-family:'Times New Roman', Times, serif !important; */
     }
 
     .cal-head {
@@ -611,6 +611,73 @@
       font-size: 24px;
       font-weight: 400;
     }
+
+    .anketa {
+      background: #fffdf8;
+      border: 2px solid #d3bfa2;
+      border-radius: 20px;
+      padding: 30px 40px;
+      width: 320px;
+      margin: 0 auto;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .anketa:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .anketa h2 {
+      color: #5b4322;
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #cbb894;
+      border-radius: 8px;
+      outline: none;
+      margin-bottom: 20px;
+      transition: 0.3s;
+      font-size: 15px;
+    }
+
+    input[type="text"]:focus {
+      border-color: #a68956;
+      box-shadow: 0 0 6px #d2b47c;
+    }
+
+    .radio-group {
+      text-align: left;
+      margin-bottom: 20px;
+      color: #5b4322;
+      font-weight: 500;
+    }
+
+    .radio-group label {
+      display: block;
+      margin: 8px 0;
+      cursor: pointer;
+    }
+
+    button {
+      background: #b9935a;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #a57f47;
+    }
   </style>
 
 </head>
@@ -693,14 +760,26 @@
 
 
   <section class="container reveal" style="padding-bottom:24px">
-    <div class="photo">
+    <!-- <div class="photo">
       <img src="third.jpg" alt="Жуптун романтикалуу учуру">
+    </div> -->
+    <div class="anketa">
+      <h2>Анкета</h2>
+      <input id="name" type="text" placeholder="Введите имя" />
+
+      <div class="radio-group">
+        <label><input type="radio" name="ask" value="baram" /> Барaм</label>
+        <label><input type="radio" name="ask" value="barbaim" /> Барбайм</label>
+      </div>
+
+      <button id="btn-send">Жөнөтүү</button>
     </div>
+
   </section>
 
   <!-- Фото-футер -->
   <footer class="footer-hero">
-    <img class="footer-img" src="footer.jpeg" alt="" loading="lazy">
+    <!-- <img class="footer-img" src="footer.jpeg" alt="" loading="lazy"> -->
     <div class="panel">
       <div class="footer-eyebrow">СИЗДЕРДИ ЧЫДАМСЫЗДЫК МЕНЕН КҮТӨБҮЗ</div>
       <div class="footer-title">Бул кечени сиздер менен бөлүшкөнүбүзгө кубанычтабыз</div>
@@ -872,6 +951,46 @@
         }
       });
     })();
+  </script>
+
+  <script>
+    document.getElementById('btn-send').addEventListener('click', async () => {
+      const name = document.getElementById('name').value.trim();
+      const ask = document.querySelector('input[name="ask"]:checked');
+
+      if (!name) {
+        alert('Атыңызды жазыңыз!');
+        return;
+      }
+
+      if (!ask) {
+        alert('Суроого жооп бериңиз!');
+        return;
+      }
+
+      const answer = ask.value;
+
+      console.log(`Атыңыз: ${name}\nЖооп: ${answer}`);
+      const data = {
+        name: name,
+        answer: `${answer}`
+      };
+      try {
+        const res = await fetch('https://68efa334b06cc802829e2c57.mockapi.io/api/v1/users', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(data)
+        });
+
+        if (!res.ok) throw new Error('Сервер катасы');
+        alert('Маалымат ийгиликтүү жөнөтүлдү!');
+      } catch (err) {
+        console.error(err);
+        alert('Жөнөтүүдө ката чыкты!');
+      }
+    });
   </script>
 </body>
 
