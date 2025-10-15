@@ -12,8 +12,10 @@
     rel="stylesheet">
 
   <meta property="og:title" content="🌸 ЧАКЫРУУ 🌸 ">
-  <meta property="og:description" content="✨Урматтуу туугандар жана достор! Биз сиздерди 5-ноябрь  күнү Мурат & Назиранын  үлпөт тоюнда күтөбүз!!!✨">
-  <meta property="og:image" content="">
+  <meta property="og:description"
+
+    content="✨Урматтуу туугандар жана достор! Биз сиздерди 5-ноябрь  күнү Мурат & Назиранын  үлпөт тоюнда күтөбүз!!!✨">
+  <meta property="og:image" content="https://github.com/octladyy/invite/blob/master/second.jpg">
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap"
     rel="stylesheet">
@@ -22,12 +24,15 @@
     @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Kurale&display=swap');
 
-    body, .names * {
-         font-family: "Great Vibes", cursive !important;
+    body,
+    .names * {
+      font-family: "Great Vibes", cursive !important;
     }
 
-    .footer-eyebrow , .footer-title , .san-min * {
-        font-family: "Kurale", serif !important;
+    .footer-eyebrow,
+    .footer-title,
+    .san-min * {
+      font-family: "Kurale", serif !important;
     }
   </style>
 
@@ -131,9 +136,10 @@
     }
 
     .names {
-      font-size: clamp(40px, 8.4vw, 96px);
-      font-family: "Playfair Display", serif;
+      font-size: clamp(100px, 8.4vw, 96px);
+      /* font-family: "Playfair Display", serif; */
       letter-spacing: .5px;
+      font-weight: 500;
       color: #000
     }
 
@@ -347,6 +353,8 @@
     }
 
     .h2.loc-title {
+      font-family: "Kurale", serif !important;
+      font-weight: 600;
       color: #000;
       text-transform: uppercase;
       letter-spacing: .14em;
@@ -376,7 +384,8 @@
       color: #000;
       font-size: clamp(15px, 2.6vw, 19px);
       line-height: 1.5;
-      margin: 0 0 24px
+      margin: 0 0 24px;
+      font-size: 20px;
     }
 
     .loc-photo {
@@ -589,9 +598,18 @@
       line-height: 1
     }
 
-    .rotator-plain{
+    .rotator-plain {
       font-size: 40px;
       font-weight: 600;
+    }
+
+    .loc-time {
+      background-color: aliceblue;
+      border-radius: 30px;
+      margin-bottom: 10px;
+      padding: 10px 30px;
+      font-size: 24px;
+      font-weight: 400;
     }
   </style>
 
@@ -664,9 +682,10 @@
         <div class="loc-venue">«Сый-Ордо»<span class="accent">рестораны</span></div>
         <div class="loc-address">Кызыл-Өзгөрүш айылы</div>
       </div>
-      <div class="loc-photo">
+      <div class="loc-time">
+        <span class="">17:00</span>
         <!-- <img src="syi-ordo.jpg" alt="«Сый-Ордо»" loading="lazy"> -->
-        <img src="syi-ordo2.jpg" alt="«Сый-Ордо»" loading="lazy">
+        <!-- <img src="syi-ordo2.jpg" alt="«Сый-Ордо»" loading="lazy"> -->
       </div>
       <a class="loc-btn" href="https://go.2gis.com/XBmv0" target="_blank" rel="noopener">Картадан ачуу</a>
     </div>
@@ -816,7 +835,12 @@
       }
 
       async function tryPlay() {
-        try { audio.muted = false; await audio.play(); setBtn(true); return true; }
+        try {
+          audio.muted = false;
+          await audio.play();
+          setBtn(true);
+          return true;
+        }
         catch (e) { setBtn(false); return false; }
       }
 
@@ -842,7 +866,10 @@
 
       btn.addEventListener('click', () => {
         if (audio.paused) { tryPlay(); }
-        else { audio.pause(); setBtn(false); }
+        else {
+          audio.pause();
+          setBtn(false);
+        }
       });
     })();
   </script>
