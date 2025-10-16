@@ -12,16 +12,19 @@
     rel="stylesheet">
 
   <!-- <meta property="og:image" content="https://arsenmirlanov05-ux.github.io/-/img000.jpeg"> -->
-   <meta property="og:image" content="https://arsenmirlanov05-ux.github.io/-/img000.jpeg">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
+  <meta property="og:image" content="https://arsenmirlanov05-ux.github.io/-/img000.jpeg">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap"
+    rel="stylesheet">
 
-  <meta property="og:title" content="🌸 ЧАКЫРУУ 🌸 ">
+  <meta class="hero-hero" property="og:title" content="                  🌸 ЧАКЫРУУ 🌸 ">
   <meta property="og:description" content="✨Биз сиздерди 5-ноябрь  күнү Мурат & Назиранын  үлпөт тоюнда күтөбүз!!!✨">
 
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Kurale&display=swap');
@@ -33,9 +36,12 @@
 
     .footer-eyebrow,
     .footer-title,
-    .san-min * {
+    .san-min,
+    .dow * {
       font-family: "Kurale", serif !important;
     }
+
+    .hero-hero {}
   </style>
 
   <style>
@@ -70,7 +76,7 @@
       background-image: url(bg2.jpg);
       background-repeat: no-repeat;
       background-size: cover;
-      width: 100%;
+      /* width: 100%; */
 
     }
 
@@ -161,6 +167,8 @@
 
     .wedding-tag {
       font-family: "Playfair Display", serif;
+      font-family: "Kurale", serif !important;
+      /* font-family: "Great Vibes", cursive !important; */
       font-style: italic;
       color: var(--gold);
       font-weight: 700;
@@ -290,7 +298,6 @@
       border: 1px solid var(--line);
       border-radius: 16px;
       overflow: hidden;
-      /* font-family:'Times New Roman', Times, serif !important; */
     }
 
     .cal-head {
@@ -303,6 +310,7 @@
     }
 
     .cal-title {
+      font-size: 20px;
       font-weight: 600;
       color: #000
     }
@@ -312,13 +320,17 @@
       grid-template-columns: repeat(7, 1fr)
     }
 
+    .dow{
+      font-family: "Kurale", serif !important; 
+    }
+
     .dow,
     .day {
       padding: 10px 0;
       text-align: center;
       border-right: 1px solid var(--line);
       border-bottom: 1px solid var(--line);
-      font-size: 14px;
+      font-size: 16px;
       color: #000
     }
 
@@ -357,7 +369,7 @@
     .h2.loc-title {
       font-family: "Kurale", serif !important;
       font-weight: 600;
-      color: #000;
+      color: #e29700;
       text-transform: uppercase;
       letter-spacing: .14em;
       margin: 0 0 40px
@@ -383,6 +395,7 @@
     }
 
     .loc-address {
+      font-family: "Kurale", serif !important;
       color: #000;
       font-size: clamp(15px, 2.6vw, 19px);
       line-height: 1.5;
@@ -410,6 +423,7 @@
     }
 
     .loc-btn {
+      font-size: 18px;
       text-decoration: none;
       display: inline-block;
       padding: 16px 26px;
@@ -424,7 +438,7 @@
 
     .loc-btn:hover {
       transform: translateY(-1px);
-      background: #000
+      background: var(--gold-3);
     }
 
     .loc-btn:active {
@@ -610,8 +624,13 @@
       border-radius: 30px;
       margin-bottom: 10px;
       padding: 10px 30px;
-      font-size: 24px;
+      font-size: 32px;
       font-weight: 400;
+    }
+
+    .loc-time:hover {
+      transform: translateY(-1px);
+      background:rgba(197, 162, 94, .7);
     }
 
     .anketa {
@@ -645,7 +664,7 @@
       outline: none;
       margin-bottom: 20px;
       transition: 0.3s;
-      font-size: 15px;
+      font-size: 18px;
     }
 
     input[type="text"]:focus {
@@ -654,6 +673,10 @@
     }
 
     .radio-group {
+      display: flex;
+      flex-direction: column;
+font-family: "Kurale", serif !important; 
+      font-size: 16px;
       text-align: left;
       margin-bottom: 20px;
       color: #5b4322;
@@ -667,7 +690,7 @@
     }
 
     button {
-      background: #b9935a;
+      background: #965f0d;
       color: white;
       border: none;
       padding: 10px 20px;
@@ -679,6 +702,10 @@
 
     button:hover {
       background: #a57f47;
+    }
+
+    .loc-text {
+      margin-bottom: 20px;
     }
   </style>
 
@@ -746,14 +773,15 @@
 
   <!-- ЛОКАЦИЯ -->
   <section class="section location reveal">
-    <h2 class="h2 loc-title">ЖАЙГАШКАН ЖЕРИ</h2>
+    <h2 class="h2 loc-title">Кызыл-Өзгөрүш айылы</h2>
     <div class="loc-card">
       <div class="loc-text">
-        <div class="loc-venue">«Сый-Ордо»<span class="accent">рестораны</span></div>
-        <div class="loc-address">Кызыл-Өзгөрүш айылы</div>
+        <div class="loc-venue">«Сый-Ордо»<span class="accent"> рестораны</span></div>
+
+        <!-- <div class="loc-address">Кызыл-Өзгөрүш айылы</div> -->
       </div>
       <div class="loc-time">
-        <span class="">17:00</span>
+        <span class="">5-ноябрь 17:00</span>
         <!-- <img src="syi-ordo.jpg" alt="«Сый-Ордо»" loading="lazy"> -->
         <!-- <img src="syi-ordo2.jpg" alt="«Сый-Ордо»" loading="lazy"> -->
       </div>
@@ -768,11 +796,11 @@
     </div> -->
     <div class="anketa">
       <h2>Анкета</h2>
-      <input id="name" type="text" placeholder="Введите имя" />
+      <input id="name" type="text" placeholder="Атыңызды жазыңыз" />
 
       <div class="radio-group">
-        <label><input type="radio" name="ask" value="baram" /> Барaм</label>
-        <label><input type="radio" name="ask" value="barbaim" /> Барбайм</label>
+        <label><input type="radio" name="ask" value="baram" /> Буюрса барaм</label>
+        <label><input type="radio" name="ask" value="barbaim" /> Баралбай калдым</label>
       </div>
 
       <button id="btn-send">Жөнөтүү</button>
@@ -842,7 +870,7 @@
     const year = markDate.getFullYear();
     const month = markDate.getMonth();
     const monthNames = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'];
-    const dow = ['ПН', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс']; // Дүйшөмбү...Жекшемби
+    const dow = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс']; // Дүйшөмбү...Жекшемби
 
     function buildCalendar(y, m) {
       const first = new Date(y, m, 1);
@@ -980,7 +1008,7 @@
       };
       try {
         // const base_url ="http://188.225.45.194:8000/";
-        const base_url ="https://68efa334b06cc802829e2c57.mockapi.io/api/v1/users";
+        const base_url = "https://68efa334b06cc802829e2c57.mockapi.io/api/v1/users";
 
         const res = await fetch(base_url, {
           method: 'POST',
